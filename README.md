@@ -65,7 +65,7 @@ _**BoilerHaus** is an alternative to the algorithm-centric approach employed by 
 
 #### Component Tree
 
-> Use this section to display the structure of how your React components are being rendered. This should show the parent to child relation between you components. In other words, show which components are rendering the other components. 
+![Component Tree](https://docs.google.com/spreadsheets/d/1HWHGyxn3QzHjoIJSkhxYBnx8-ftphslzAlTgZAPsya8/edit?usp=sharing) 
 
 #### Component Hierarchy
 
@@ -76,12 +76,23 @@ _**BoilerHaus** is an alternative to the algorithm-centric approach employed by 
 src
 |__ assets/
       |__ fonts
-      |__ graphics
       |__ images
       |__ mockups
 |__ components/
-      |__ Header.jsx
+      |__ Layout.jsx
+            |__ Nav.jsx
+                  |__ SocialMedia.jsx
+                  |__ Login.jsx
+                  |__ Register.jsx
+            |__ Footer.jsx
+                  |__ SocialMedia.jsx
+      |__ Artists.jsx
+            |__ UpcomingEvents.jsx
+            |__ Playlist.jsx
+            |__ PlaylistDetail.jsx
 |__ services/
+      |__ artists.js
+      |__ playlists.js
 
 ```
 
@@ -91,11 +102,11 @@ src
 
 |  Component   |    Type    | state | props | Description                                                      |
 | :----------: | :--------: | :---: | :---: | :--------------------------------------------------------------- |
-|    Header    | functional |   n   |   n   | _The header will contain the navigation and logo._               |
-|  Navigation  | functional |   n   |   n   | _The navigation will provide a link to each of the pages._       |
-|   Gallery    |   class    |   y   |   n   | _The gallery will render the posts using cards in flexbox._      |
-| Gallery Card | functional |   n   |   y   | _The cards will render the post info via props._                 |
-|    Footer    | functional |   n   |   n   | _The footer will show info about me and a link to my portfolio._ |
+|    Nav    | functional |   n   |   n   | _The header will contain the logo, social media icons, and login/register links._               |
+|  Layout  | functional |   n   |   n   | _The layout will contain the header and footer and will render them to all pages._       |
+|   Artists    |   functional    |   y   |   n   | _The artist component will render all of the featured artists using cards in flexbox._      |
+| Artist | functional |   n   |   y   | _The artist card will render the artist info via props._                 |
+|    Footer    | functional |   n   |   n   | _The footer will show contact info, social media icons, and login/register links._ |
 
 #### Time Estimates
 
@@ -106,8 +117,6 @@ src
 | Add Contact Form    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
 | Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
 | TOTAL               |          |     6 hrs      |     3 hrs     |     TBD     |
-
-> _Why is this necessary? Time frames are key to the development cycle. You have limited time to code your app, and your estimates can then be used to evaluate possibilities of your MVP and post-MVP based on time needed. It's best you assume an additional hour for each component, as well as a few hours added to the total time, to play it safe._
 
 <br>
 
