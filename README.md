@@ -37,7 +37,6 @@ _**BoilerHaus** is an alternative to the algorithm-centric approach employed by 
 
 #### Wireframes
 
-- Desktop Flowchart
 [Wireframe](https://wireframe.cc/KU8Kh9)
 
 #### Component Tree
@@ -111,7 +110,7 @@ src
 
 ## Post-MVP
 
-> Use this section to document ideas you've had that would be fun (or necessary) for your Post-MVP. This will be helpful when you return to your project after graduation!
+Ideally, I would like to be able to build out the upcoming events and genres search/filtering functionalities.
 
 ***
 
