@@ -69,8 +69,6 @@ _**BoilerHaus** is an alternative to the algorithm-centric approach employed by 
 
 #### Component Hierarchy
 
-> Use this section to define your React components and the data architecture of your app. This should be a reflection of how you expect your directory/file tree to look like. 
-
 ``` structure
 
 src
@@ -124,7 +122,7 @@ src
 
 #### ERD Model
 
-> Use this section to display an image of a computer generated ERD model. You can use draw.io, Lucidchart or another ERD tool.
+[ERD Model](https://app.diagrams.net/#Hchrisratsimba123%2FBoilerHaus%2Fmaster%2Fboilerhaus-2)
 
 <br>
 
