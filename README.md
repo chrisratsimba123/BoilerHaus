@@ -65,7 +65,7 @@ _**BoilerHaus** is an alternative to the algorithm-centric approach employed by 
 
 #### Component Tree
 
-![Component Tree](https://docs.google.com/spreadsheets/d/1HWHGyxn3QzHjoIJSkhxYBnx8-ftphslzAlTgZAPsya8/edit?usp=sharing) 
+[Component Tree](https://docs.google.com/spreadsheets/d/1HWHGyxn3QzHjoIJSkhxYBnx8-ftphslzAlTgZAPsya8/edit?usp=sharing) 
 
 #### Component Hierarchy
 
