@@ -37,31 +37,8 @@ _**BoilerHaus** is an alternative to the algorithm-centric approach employed by 
 
 #### Wireframes
 
-> Use the Wireframes section to display desktop, tablet and mobile views. No hand-drawn wireframes. Use a tool like wireframe.cc, Whimsical or AdobeXD
-
-![Dummy Link](url)
-
-- Desktop Landing
-
-![Dummy Link](url)
-
-- Desktop Hero
-
-![Dummy Link](url)
-
-- Resource Index
-
-![Dummy Link](url)
-
-- Resource Show
-
-![Dummy Link](url)
-
-- Tablet Resource Index
-
-![Dummy Link](url)
-
-- Mobile Resource Index
+- Desktop Flowchart
+[Wireframe](https://wireframe.cc/KU8Kh9)
 
 #### Component Tree
 
@@ -112,8 +89,12 @@ src
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Add Contact Form    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
-| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
+| Set-Up Back-End    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
+| Create Login/Register    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
+| Create CRUD Actions on Back-End   |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
+| Set-Up Front-End    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
+| Set-Up Routes    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
+| CSS Styling    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
 | TOTAL               |          |     6 hrs      |     3 hrs     |     TBD     |
 
 <br>
