@@ -1,4 +1,6 @@
 class Artist < ApplicationRecord
+    has_and_belongs_to_many :playlists
+    
     has_secure_password
 
     validates :username, presence: true, uniqueness: true
