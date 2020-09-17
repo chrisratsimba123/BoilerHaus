@@ -1,7 +1,7 @@
 import api from './api-config';
 
 export const createArtist = async (data) => {
-    const resp = await api.post('/artists', { teacher: data })
+    const resp = await api.post('/artists', { artist: data })
     return resp.data
 }
 
@@ -16,7 +16,7 @@ export const readOneArtist = async (id) => {
 }
 
 export const updateArtist = async (id, data) => {
-    const resp = await api.put(`/artists/${id}`, { teacher: data })
+    const resp = await api.put(`/artists/${id}`, { artist: data })
     return resp.data
 }
 
