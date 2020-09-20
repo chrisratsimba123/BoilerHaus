@@ -5,7 +5,7 @@ import './App.css';
 
 import Layout from './Layout/Layout'
 import Login from './Screens/Login/Login'
-import Register from './Screens/Register'
+import Register from './Screens/Register/Register'
 
 import { loginUser, registerUser, verifyUser, removeToken } from './Services/auth'
 

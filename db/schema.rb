@@ -19,6 +19,9 @@ ActiveRecord::Schema.define(version: 2020_09_17_204033) do
     t.string "username"
     t.string "password_digest"
     t.string "email"
+    t.string "image"
+    t.string "genre"
+    t.string "city"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -30,6 +33,8 @@ ActiveRecord::Schema.define(version: 2020_09_17_204033) do
 
   create_table "playlists", force: :cascade do |t|
     t.string "name"
+    t.string "image"
+    t.string "playlist_description"
     t.bigint "artist_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -38,12 +43,15 @@ ActiveRecord::Schema.define(version: 2020_09_17_204033) do
 
   create_table "songs", force: :cascade do |t|
     t.string "name"
+    t.bigint "artist_id", null: false
     t.bigint "playlist_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["artist_id"], name: "index_songs_on_artist_id"
     t.index ["playlist_id"], name: "index_songs_on_playlist_id"
   end
 
   add_foreign_key "playlists", "artists"
+  add_foreign_key "songs", "artists"
   add_foreign_key "songs", "playlists"
 end
