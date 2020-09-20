@@ -1,3 +1,3 @@
 class Song < ApplicationRecord
-  belongs_to :playlist
+  has_and_belongs_to_many :playlist
 end
