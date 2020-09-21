@@ -8,7 +8,8 @@ import Login from './Screens/Login/Login'
 import Register from './Screens/Register/Register'
 
 import { loginUser, registerUser, verifyUser, removeToken } from './Services/auth'
-import MainContainer from './Containers/MainContainer'
+import ArtistsContainer from './Containers/ArtistsContainer'
+import PlaylistsContainer from './Containers/PlaylistsContainer'
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null)
@@ -59,7 +60,10 @@ function App() {
           />
         </Route>
         <Route path='/'>
-          <MainContainer 
+          <ArtistsContainer 
+            currentUser={currentUser}
+          />
+          <PlaylistsContainer 
             currentUser={currentUser}
           />
         </Route>
