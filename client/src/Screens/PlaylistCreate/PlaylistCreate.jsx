@@ -19,7 +19,7 @@ const PlaylistCreate = (props) => {
     const handleChange = (e) => {
         const { name, value } = e.target
         setPlaylist({
-            ...prevState,
+            // ...prevState,
             [name]: value
         })
     }

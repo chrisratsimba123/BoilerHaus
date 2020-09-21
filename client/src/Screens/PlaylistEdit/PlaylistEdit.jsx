@@ -19,7 +19,7 @@ const PlaylistEdit = (props) => {
 
     useEffect(() => {
         const fetchPlaylist = async () => {
-            const artist = await getOnePlaylist(id)
+            const playlist = await getOnePlaylist(id)
             setPlaylist(playlist)
         }
         fetchPlaylist()
@@ -28,7 +28,7 @@ const PlaylistEdit = (props) => {
     const handleChange = (e) => {
         const { name, value } = e.target
         setPlaylist({
-            ...prevState,
+            // ...prevState,
             [name]: value
         })
     }
@@ -122,4 +122,4 @@ const PlaylistEdit = (props) => {
     )
 }
 
-export default ArtistEdit
+export default PlaylistEdit

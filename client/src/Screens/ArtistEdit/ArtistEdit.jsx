@@ -27,7 +27,7 @@ const ArtistEdit = (props) => {
     const handleChange = (e) => {
         const { name, value } = e.target
         setArtist({
-            ...prevState,
+            // ...prevState,
             [name]: value
         })
     }

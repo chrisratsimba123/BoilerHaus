@@ -20,11 +20,11 @@ const Artists = (props) => {
     )
 
     return (
-        <>
+        <Layout>
             <div className="artists">
                 {artistsJSX}
             </div>
-        </>
+        </Layout>
     )
 }
 

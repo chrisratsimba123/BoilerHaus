@@ -21,7 +21,7 @@ export default function ArtistsContainer(props) {
     }, [])
 
     const newArtist = async (formData) => {
-        const newlyCreatedArtist = await createArtist(id, formData)
+        const newlyCreatedArtist = await createArtist(formData)
         setArtists(prevState => [...prevState, newlyCreatedArtist])
         history.push('/artists')
     }

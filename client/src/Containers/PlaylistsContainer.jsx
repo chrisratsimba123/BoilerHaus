@@ -21,7 +21,7 @@ export default function PlaylistsContainer(props) {
     }, [])
 
     const newPlaylist = async (formData) => {
-        const newlyCreatedPlaylist = await createPlaylist(id, formData)
+        const newlyCreatedPlaylist = await createPlaylist(formData)
         setPlaylists(prevState => [...prevState, newlyCreatedPlaylist])
         history.push('/playlists')
     }
