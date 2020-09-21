@@ -1,0 +1,74 @@
+import React, { useState } from 'react'
+import Layout from '../../Layout/Layout'
+import { Redirect } from 'react-router-dom'
+import { createPlaylist } from '../../Services/artists'
+
+const PlaylistCreate = (props) => {
+
+    const [playlist, setPlaylist] = useState({
+        name: '',
+        image: '',
+        playlist_description: ''
+    })
+
+    const [isCreated, setCreated] = useState(false)
+
+    const handleChange = (e) => {
+        const { name, value } = e.target
+        setPlaylist({
+            ...prevState,
+            [name]: value
+        })
+    }
+
+    const handleSubmit = async (e) => {
+        e.preventDefault()
+        const created = await createPlaylist(playlist)
+        setCreated({ created })
+    }
+
+    if (isCreated) {
+        return <Redirect to={`/playlists`} />
+    }
+    return (
+        <Layout currentUser={props.currentUser}>
+            <form className='create-form-playlist' onSubmit={handleSubmit}>
+                <input
+                    className='input-playlist-name'
+                    type='text'
+                    placeholder='Name'
+                    value={playlist.name}
+                    name='name'
+                    required
+                    autoFocus
+                    onChange={handleChange}
+                />
+                <input
+                    className='input-playlist-image'
+                    type='url'
+                    placeholder='Image Link'
+                    value={playlist.image}
+                    name='image'
+                    required
+                    autoFocus
+                    onChange={handleChange}
+                />
+                <input
+                    className='input-playlist-description'
+                    rows={10}
+                    type='text'
+                    placeholder='Playlist Descripton'
+                    value={playlist.playlist_description}
+                    name='description'
+                    required
+                    autoFocus
+                    onChange={handleChange}
+                />
+                <button type='submit' className='submit-button-playlist'>Submit</button>
+            </form>
+        </Layout>
+    )
+
+}
+
+export default PlaylistCreate

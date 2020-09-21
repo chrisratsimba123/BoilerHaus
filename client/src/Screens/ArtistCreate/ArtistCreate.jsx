@@ -34,9 +34,9 @@ const ArtistCreate = (props) => {
     }
     return (
         <Layout currentUser={props.currentUser}>
-            <form className='create-form' onSubmit={handleSubmit}>
+            <form className='create-form-artist' onSubmit={handleSubmit}>
                 <input
-                    className='input-username'
+                    className='input-username-artist'
                     type='text'
                     placeholder='Name'
                     value={artist.username}
@@ -58,7 +58,7 @@ const ArtistCreate = (props) => {
                 <input
                     className='input-artist-image'
                     type='url'
-                    placeholder='Image'
+                    placeholder='Image Link'
                     value={artist.image}
                     name='image'
                     required
