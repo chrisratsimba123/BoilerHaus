@@ -3,7 +3,7 @@ import Header from '../Components/Shared/Header/Header'
 import Footer from '../Components/Shared/Footer/Footer'
 
 const Layout = (props) => (
-    <div className='layout'>
+    <>
         <Header
             currentUser={props.currentUser}
             handleLogout={props.handleLogout}
@@ -11,8 +11,8 @@ const Layout = (props) => (
         <div className='layout-children'>
                 {props.children}
         </div>
-        <Footer />
-    </div>
+        {/* <Footer /> */}
+    </>
 )
 
 export default Layout

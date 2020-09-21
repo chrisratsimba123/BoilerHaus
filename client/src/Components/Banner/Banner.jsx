@@ -8,8 +8,13 @@ export default function Banner(props) {
         <div>
             <div className='banner'>
                 <img className='banner-image'
-                    src
+                    src={src}
+                    alt={alt}
                 />
+                <div className='shadow-box-home-screen'>
+                    <h2>BoilerHaus</h2>
+                    <p>A collaborative music platform for DJs created by DJs.</p>
+                </div>
             </div>
         </div>
     )
