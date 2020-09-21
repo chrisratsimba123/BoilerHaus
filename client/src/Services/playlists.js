@@ -5,12 +5,12 @@ export const createPlaylist = async (data) => {
     return resp.data
 }
 
-export const readAllPlaylists = async () => {
+export const getAllPlaylists = async () => {
     const resp = await api.get('/playlists')
     return resp.data
 }
 
-export const readOnePlaylist = async (id) => {
+export const getOnePlaylist = async (id) => {
     const resp = await api.get(`/playlists/${id}`)
     return resp.data
 }
