@@ -5,12 +5,12 @@ export const createArtist = async (data) => {
     return resp.data
 }
 
-export const readAllArtists = async () => {
+export const getAllArtists = async () => {
     const resp = await api.get('/artists')
     return resp.data
 }
 
-export const readOneArtist = async (id) => {
+export const getOneArtist = async (id) => {
     const resp = await api.get(`/artists/${id}`)
     return resp.data
 }
