@@ -30,6 +30,7 @@ const PlaylistDetail = (props) => {
                     <div className='playlist-detail-name'>{playlist.name}</div>
                     <div className='playlist-detail-description'>{playlist.playlist_description}</div>
                 </div>
+                {/* Map Out Songs within this Playlist into a List */}
                 <div className='button-container-playlist'>
                     <button className='playlist-edit-button'><Link className='playlist-edit-link' to={`/playlists/${playlist.id}/edit`}>Edit</Link></button>
                     <button className='playlist-delete-button' onClick={() => destroyPlaylist(playlist.id)}>Delete</button>
@@ -39,4 +40,4 @@ const PlaylistDetail = (props) => {
     )
 }
 
-export default ArtistDetail
+export default PlaylistDetail

@@ -108,3 +108,5 @@ const ArtistEdit = (props) => {
         </Layout>
     )
 }
+
+export default ArtistEdit

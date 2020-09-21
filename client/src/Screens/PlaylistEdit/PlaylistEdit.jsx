@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import { useParams, Redirect } from 'react-router-dom'
 import Layout from '../../Layout/Layout'
-import { Redirect } from 'react-router-dom'
-import { createPlaylist } from '../../Services/playlists'
+import { getOnePlaylist, updatePlaylist } from '../../Services/playlists'
 
-const PlaylistCreate = (props) => {
+const PlaylistEdit = (props) => {
 
     const [playlist, setPlaylist] = useState({
         name: '',
@@ -14,7 +14,16 @@ const PlaylistCreate = (props) => {
         song3: ''
     })
 
-    const [isCreated, setCreated] = useState(false)
+    const [isUpdated, setUpdated] = useState(false)
+    let { id } = useParams()
+
+    useEffect(() => {
+        const fetchPlaylist = async () => {
+            const artist = await getOnePlaylist(id)
+            setPlaylist(playlist)
+        }
+        fetchPlaylist()
+    }, [id])
 
     const handleChange = (e) => {
         const { name, value } = e.target
@@ -26,18 +35,36 @@ const PlaylistCreate = (props) => {
 
     const handleSubmit = async (e) => {
         e.preventDefault()
-        const created = await createPlaylist(playlist)
-        setCreated({ created })
+        let { id } = props.match.params
+        const updated = await updatePlaylist(id, playlist)
+        setUpdated(updated)
     }
 
-    if (isCreated) {
-        return <Redirect to={`/playlists`} />
+    if (isUpdated) {
+        return <Redirect to={`/playlists/${props.match.params.id}`}/>
     }
+
     return (
         <Layout currentUser={props.currentUser}>
-            <form className='create-form-playlist' onSubmit={handleSubmit}>
+            <div className='playlist-edit'>
+                <div className='playlist-edit-image-container'>
+                    <img className='edit-playlist-image' src={playlist.image} alt={playlist.name}/>
+                    <form onSubmit={handleSubmit}>
+                        <input
+                            className='edit-input-playlist-image'
+                            type='url'
+                            placeholder='Image'
+                            value={playlist.image}
+                            name='image'
+                            required
+                            autoFocus
+                            onChange={handleChange}
+                        />
+                    </form>
+                </div>
+                <form className='edit-playlist-form' onSubmit={handleSubmit}>
                 <input
-                    className='input-playlist-name'
+                    className='input-playlist-name-edit-screen'
                     type='text'
                     placeholder='Name'
                     value={playlist.name}
@@ -47,18 +74,9 @@ const PlaylistCreate = (props) => {
                     onChange={handleChange}
                 />
                 <input
-                    className='input-playlist-image'
-                    type='url'
-                    placeholder='Image Link'
-                    value={playlist.image}
-                    name='image'
-                    required
-                    autoFocus
-                    onChange={handleChange}
-                />
-                <input
-                    className='input-playlist-description'
+                    className='input-playlist-description-edit-screen'
                     rows={10}
+                    cols={78}
                     type='text'
                     placeholder='Playlist Descripton'
                     value={playlist.playlist_description}
@@ -68,7 +86,7 @@ const PlaylistCreate = (props) => {
                     onChange={handleChange}
                 />
                 <input
-                    className='input-song-name'
+                    className='input-song-name-edit-screen'
                     type='text'
                     placeholder='Song 1'
                     value={playlist.song1}
@@ -78,7 +96,7 @@ const PlaylistCreate = (props) => {
                     onChange={handleChange}
                 />
                 <input
-                    className='input-song-name'
+                    className='input-song-name-edit-screen'
                     type='text'
                     placeholder='Song 2'
                     value={playlist.song2}
@@ -88,7 +106,7 @@ const PlaylistCreate = (props) => {
                     onChange={handleChange}
                 />
                 <input
-                    className='input-song-name'
+                    className='input-song-name-edit-screen'
                     type='text'
                     placeholder='Song 3'
                     value={playlist.song3}
@@ -97,11 +115,11 @@ const PlaylistCreate = (props) => {
                     autoFocus
                     onChange={handleChange}
                 />
-                <button type='submit' className='submit-button-playlist'>Submit</button>
+                <button type='submit' className='save-button-playlist'>Save</button>
             </form>
+            </div>
         </Layout>
     )
-
 }
 
-export default PlaylistCreate
+export default ArtistEdit
