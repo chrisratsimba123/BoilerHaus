@@ -349,6 +349,16 @@ puts "#{Song.count} songs created!"
 
 puts "#{Playlist.count} playlists created!"
 
+@nyc_artist1.playlists.push([@playlist1, @playlist2, @playlist3])
+@nyc_artist2.playlists.push([@playlist4, @playlist5, @playlist6])
+@nyc_artist3.playlists.push([@playlist7, @playlist8, @playlist9])
+@ldn_artist1.playlists.push([@playlist10, @playlist11, @playlist12])
+@ldn_artist2.playlists.push([@playlist13, @playlist14, @playlist15])
+@ldn_artist3.playlists.push([@playlist16, @playlist17, @playlist18])
+@ber_artist1.playlists.push([@playlist19, @playlist20, @playlist21])
+@ber_artist2.playlists.push([@playlist22, @playlist23, @playlist24])
+@ber_artist3.playlists.push([@playlist25, @playlist26, @playlist27])
+
 # @Artist_Playlist = ArtistPlaylist.create!(artist: @nyc_artist1, playlist: @playlist1, playlist: @playlist2, playlist: @playlist3)
 
 # @Artist_Playlist = ArtistPlaylist.create!(artist: @nyc_artist2, playlist: @playlist4, playlist: @playlist5, playlist: @playlist6)
