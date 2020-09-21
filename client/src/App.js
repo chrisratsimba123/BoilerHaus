@@ -42,7 +42,10 @@ function App() {
   }
   
   return (
-    <Layout>
+    <Layout
+      currentUser={currentUser}
+      handleLogout={handleLogout}
+    >
       <Switch>
         <Route path='/login'>
           <Login
