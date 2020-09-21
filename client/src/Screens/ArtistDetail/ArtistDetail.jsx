@@ -38,5 +38,6 @@ const ArtistDetail = (props) => {
             </div>
         </Layout>
     )
-
 }
+
+export default ArtistDetail
