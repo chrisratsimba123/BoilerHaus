@@ -8,6 +8,7 @@ import Login from './Screens/Login/Login'
 import Register from './Screens/Register/Register'
 
 import { loginUser, registerUser, verifyUser, removeToken } from './Services/auth'
+import MainContainer from './Containers/MainContainer'
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null)
@@ -52,9 +53,14 @@ function App() {
             loginSubmit={loginSubmit}
           />
         </Route>
-        <Route path='register'>
+        <Route path='/register'>
           <Register
             registerSubmit={registerSubmit}
+          />
+        </Route>
+        <Route path='/'>
+          <MainContainer 
+            currentUser={currentUser}
           />
         </Route>
       </Switch> 
