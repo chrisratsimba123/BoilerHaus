@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Layout from '../../Layout/Layout'
 import { Redirect } from 'react-router-dom'
-import { createPlaylist } from '../../Services/artists'
+import { createPlaylist } from '../../Services/playlists'
 
 const PlaylistCreate = (props) => {
 

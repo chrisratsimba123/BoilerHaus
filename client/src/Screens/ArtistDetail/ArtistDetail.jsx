@@ -15,7 +15,7 @@ const ArtistDetail = (props) => {
             setArtist(artist)
             setLoaded(true)
         }
-        fetchArtist
+        fetchArtist()
     }, [id])
 
     if (!isLoaded) {
@@ -24,14 +24,14 @@ const ArtistDetail = (props) => {
 
     return (
         <Layout>
-            <div className='artist-detail'>
+            <div className='artist-detail-container'>
                 <img className='artist-detail-image' src={artist.image} alt={artist.username}/>
-                <div className='detail'>
+                <div className='artist-detail-div'>
                     <div className='artist-detail-name'>{artist.username}</div>
                     <div className='artist-detail-genre'>{artist.genre}</div>
                     <div className='artist-detail-city'>{artist.city}</div>
                 </div>
-                <div className='button-container'>
+                <div className='button-container-artist'>
                     <button className='artist-edit-button'><Link className='artist-edit-link' to={`/artists/${artist.id}/edit`}>Edit</Link></button>
                     <button className='artist-delete-button' onClick={() => destroyArtist(artist.id)}>Delete</button>
                 </div>
