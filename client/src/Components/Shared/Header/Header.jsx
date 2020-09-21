@@ -1,28 +1,39 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
-export default function Header(props) {
+const Header = (props) => {
+    
     const { currentUser } = props 
+    
     return (
-        <header>
-            <h1>BoilerHaus</h1> 
-            {
-                currentUser ?
-                <div>
-                    <p>{currentUser.username}</p>
-                    <button onClick={props.handleLogout}>Logout</button>
-                </div> :
-                <Link to='login'>Login/Register</Link>
-            }
-            <hr />
-            {
-                currentUser &&
-                <>
-                    <Link to='/artists'>Artists</Link>
-                    <Link to='/genres'>Genres</Link>
-                    <Link to='/cities'>Cities</Link>
-                </>
-            }
-        </header>
+        <nav>
+            <div className='nav'>
+                <NavLink className='logo' to='/'>BoilerHaus</NavLink>
+                {
+                    currentUser ?
+                    <div>
+                        <p>{currentUser.username}</p>
+                        <button onClick={props.handleLogout}>Logout</button>
+                    </div> :
+                    <div className="login/register">
+                        <NavLink to='/login'>Login</NavLink>
+                        <NavLink to='/register'>Register</NavLink>
+                    </div>
+                }
+                <hr />
+                {
+                    currentUser &&
+                    <div className='links'>
+                        <NavLink to='/artists'>Artists</NavLink>
+                        <NavLink to='/genres'>Genres</NavLink>
+                        <NavLink to='/cities'>Cities</NavLink>
+                        <NavLink to='/create-artist'>New Artist</NavLink>
+                        <NavLink to='/create-playlist'>New Playlist</NavLink>
+                    </div>
+                }
+            </div>
+        </nav>
     )
 }
+
+export default Header
