@@ -1,16 +1,18 @@
 import React from 'react'
 import Header from '../Components/Shared/Header/Header'
+import Footer from '../Components/Shared/Footer/Footer'
 
-export default function Layout(props) {
-    return (
-        <>
-            <Header
-                currentUser={props.currentUser}
-                handleLogout={props.handleLogout}
+const Layout = (props) => (
+    <div className='layout'>
+        <Header
+            currentUser={props.currentUser}
+            handleLogout={props.handleLogout}
             />
-            <main>
+        <div className='layout-children'>
                 {props.children}
-            </main>
-        </>
-    )
-}
+        </div>
+        <Footer />
+    </div>
+)
+
+export default Layout
