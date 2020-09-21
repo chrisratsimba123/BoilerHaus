@@ -24,18 +24,26 @@ export default function Login(props) {
             <h3>Login</h3>
             <label> Username:
                 <input
+                    className='input-login-username'
                     type='text'
-                    name='username'
+                    placeholder='Name'
                     value={username}
+                    name='username'
+                    required
+                    autoFocus
                     onChange={handleChange}
                 />
             </label>
             <br />
             <label>Password:
                 <input
+                    className='input-login-password'
                     type='password'
-                    name='password'
+                    placeholder='Password'
                     value={password}
+                    name='password'
+                    required
+                    autoFocus
                     onChange={handleChange}
                 />
             </label>
