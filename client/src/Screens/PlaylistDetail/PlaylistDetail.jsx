@@ -18,7 +18,11 @@ const PlaylistDetail = (props) => {
         fetchPlaylist()
     }, [id])
 
-    const associatedSongs = playlist.songs.map(name)
+    // const associatedSongs = artist.playlists.map((playlist) => {
+    //     <div className='associated-songs'>
+    //         song={playlist.name}
+    //     </div>
+    // })
 
     if (!isLoaded) {
         return <h1>Loading...</h1>
@@ -33,9 +37,9 @@ const PlaylistDetail = (props) => {
                     <div className='playlist-detail-description'>{playlist.playlist_description}</div>
                 </div>
                 {/* Map Out Songs within this Playlist into a List */}
-                <div className='associated-songs'>
+                {/* <div className='associated-songs'>
                     {associatedSongs}
-                </div>
+                </div> */}
                 <div className='button-container-playlist'>
                     <button className='playlist-edit-button'><Link className='playlist-edit-link' to={`/playlists/${playlist.id}/edit`}>Edit</Link></button>
                     <button className='playlist-delete-button' onClick={() => destroyPlaylist(playlist.id)}>Delete</button>
