@@ -2,12 +2,13 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 384px;
-    max-height: 384px;
+    height: 256px;
+    max-height: 256px;
 }
 
 .banner-image {
     z-index: -1;
+    object-fit: cover;
 }
 
 .shadow-box {

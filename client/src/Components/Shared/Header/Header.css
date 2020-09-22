@@ -3,6 +3,7 @@
     flex-direction: row;
     justify-content: space-between;
     height: 220px;
+    z-index: 1
 }
 
 .title {

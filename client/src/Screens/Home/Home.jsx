@@ -11,32 +11,32 @@ import ArtistsImage from '../../Assets/Artist-Banner.jpeg'
 const Home = () => {
     return (
         <>
-            <Banner className='banner-image' src={Turntable} alt='Turntable Banner Image' />
+            <Banner className='banner-image' src={GenresImage} alt='Turntable Banner Image' />
             <div className='categories-home-screen'>
-                <Link to='/cities'>
-                    <div className='category'>
+                <Link className='card' to='/cities'>
+                    <div className='cities-div'>
                         <div className='category-image-home'>
-                            <img src={CitiesImage} alt='' />
+                            <img className='card-image' src={CitiesImage} alt='Cities Banner' />
                         </div>
                         <div className='category-text-home'>
                             <h1>Cities</h1>
                         </div>
                     </div>
                 </Link>
-                <Link to='/genres'>
-                    <div className='category'>
+                <Link className='card' to='/genres'>
+                    <div className='genres-div'>
                         <div className='category-image-home'>
-                            <img src={GenresImage} alt='' />
+                            <img className='card-image' src={Turntable} alt='Genres Banner' />
                         </div>
                         <div className='category-text-home'>
                             <h1>Genres</h1>
                         </div>
                     </div>
                 </Link>
-                <Link to='/artists'>
-                    <div className='category'>
+                <Link className='card' to='/artists'>
+                    <div className='artists-div'>
                         <div className='category-image-home'>
-                            <img src={ArtistsImage} alt='' />
+                            <img className='card-image' src={ArtistsImage} alt='Artists Banner' />
                         </div>
                         <div className='category-text-home'>
                             <h1>Artists</h1>

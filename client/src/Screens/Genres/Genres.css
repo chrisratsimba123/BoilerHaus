@@ -1,4 +1,4 @@
-.categories-home-screen {
+.categories-genres-screen {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -6,49 +6,49 @@
     margin-left: 400px;
 }
 
-.cities-div {
+.disco-div {
     width: 80px;
     height: 80px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     padding: 10px;
-    margin-top: 400px;
+    margin-top: 200px;
     margin-left: 400px;
     object-fit: cover;
 }
 
-.genres-div {
+.afro-div {
     width: 80px;
     height: 80px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     padding: 10px;
-    margin-top: 400px;
+    margin-top: 200px;
     margin-left: 400px;
     object-fit: cover;
 }
 
-.artists-div {
+.deep-div {
     width: 80px;
     height: 80px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     padding: 10px;
-    margin-top: 400px;
+    margin-top: 200px;
     margin-left: 400px;
     object-fit: cover;
 }
 
-.card-image {
+.card-image-genres {
     object-fit: cover;
     max-width: 30vw;
     max-height: 30vw;
 }
 
-.card {
+.card-genres {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -57,8 +57,7 @@
     color: black;
 }
 
-.card:hover {
+.card-genres:hover {
     transform: scale(1.02);
     opacity: .9;
 }
-

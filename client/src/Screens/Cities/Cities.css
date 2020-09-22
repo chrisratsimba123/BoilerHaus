@@ -1,4 +1,4 @@
-.categories-home-screen {
+.categories-cities-screen {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -6,49 +6,49 @@
     margin-left: 400px;
 }
 
-.cities-div {
+.nyc-div {
     width: 80px;
     height: 80px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     padding: 10px;
-    margin-top: 400px;
+    margin-top: 450px;
     margin-left: 400px;
     object-fit: cover;
 }
 
-.genres-div {
+.ldn-div {
     width: 80px;
     height: 80px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     padding: 10px;
-    margin-top: 400px;
-    margin-left: 400px;
+    margin-top: 600px;
+    margin-left: 350px;
     object-fit: cover;
 }
 
-.artists-div {
+.ber-div {
     width: 80px;
     height: 80px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     padding: 10px;
-    margin-top: 400px;
+    margin-top: 600px;
     margin-left: 400px;
     object-fit: cover;
 }
 
-.card-image {
+.card-image-cities {
     object-fit: cover;
     max-width: 30vw;
     max-height: 30vw;
 }
 
-.card {
+.card-cities {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -57,8 +57,7 @@
     color: black;
 }
 
-.card:hover {
+.card-cities:hover {
     transform: scale(1.02);
     opacity: .9;
 }
-

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import './Playlists.css'
 
 import Playlist from '../../Components/Playlist/Playlist'
 import Layout from '../../Layout/Layout'
