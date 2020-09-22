@@ -4,8 +4,12 @@ import { Switch, Route, useHistory } from 'react-router-dom'
 import './App.css';
 
 import Layout from './Layout/Layout'
+import Home from './Screens/Home/Home'
 import Login from './Screens/Login/Login'
 import Register from './Screens/Register/Register'
+import Cities from './Screens/Cities/Cities'
+import Genres from './Screens/Genres/Genres'
+import Artists from './Screens/Artists/Artists'
 
 import { loginUser, registerUser, verifyUser, removeToken } from './Services/auth'
 import ArtistsContainer from './Containers/ArtistsContainer'
@@ -49,6 +53,9 @@ function App() {
       handleLogout={handleLogout}
     >
       <Switch>
+        <Route exact path='/'>
+          <Home />
+        </Route>
         <Route path='/login'>
           <Login
             loginSubmit={loginSubmit}
@@ -58,6 +65,15 @@ function App() {
           <Register
             registerSubmit={registerSubmit}
           />
+        </Route>
+        <Route path='/cities'>
+          <Cities />
+        </Route>
+        <Route path='/genres'>
+          <Genres />
+        </Route>
+        <Route path='/artists'>
+          <Artists />
         </Route>
         <Route path='/'>
           <ArtistsContainer 

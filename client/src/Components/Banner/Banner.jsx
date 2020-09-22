@@ -18,5 +18,4 @@ export default function Banner(props) {
             </div>
         </div>
     )
-
 }
