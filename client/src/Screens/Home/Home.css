@@ -1,0 +1,32 @@
+.categories-home-screen {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 380px;
+    max-height: 380px;
+    padding-top: 40px;
+    margin-right: 170px;
+    margin-left: 200px;
+}
+
+.category {
+    display: flex;
+    flex-direction: column;
+}
+
+.category-image-home {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.category-text-home {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.category-text-home h1 {
+    font-size: 50px;
+    margin-bottom: -20px;
+}
