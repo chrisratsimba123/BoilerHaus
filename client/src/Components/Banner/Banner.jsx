@@ -11,7 +11,7 @@ export default function Banner(props) {
                     src={src}
                     alt={alt}
                 />
-                <div className='shadow-box-home-screen'>
+                <div className='shadow-box'>
                     <h2>BoilerHaus</h2>
                     <p>A collaborative music platform for DJs created by DJs.</p>
                 </div>
