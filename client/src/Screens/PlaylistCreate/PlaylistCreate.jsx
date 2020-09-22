@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import './PlaylistCreate.css'
 import Layout from '../../Layout/Layout'
 import { Redirect } from 'react-router-dom'
 import { createPlaylist } from '../../Services/playlists'
@@ -97,7 +98,7 @@ const PlaylistCreate = (props) => {
                     autoFocus
                     onChange={handleChange}
                 />
-                <button type='submit' className='submit-button-playlist'>Submit</button>
+                <button type='submit' className='submit-button-playlist-create'>Submit</button>
             </form>
         </Layout>
     )
