@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useParams, Redirect } from 'react-router-dom'
 import './PlaylistEdit.css'
-import Layout from '../../Layout/Layout'
 import { getOnePlaylist, updatePlaylist } from '../../Services/playlists'
 
 const PlaylistEdit = (props) => {
@@ -46,7 +45,7 @@ const PlaylistEdit = (props) => {
     }
 
     return (
-        <Layout currentUser={props.currentUser}>
+        <>
             <div className='playlist-edit'>
                 <div className='playlist-edit-image-container'>
                     <img className='edit-playlist-image' src={playlist.image} alt={playlist.name}/>
@@ -119,7 +118,7 @@ const PlaylistEdit = (props) => {
                 <button type='submit' className='save-button-playlist'>Save</button>
             </form>
             </div>
-        </Layout>
+        </>
     )
 }
 

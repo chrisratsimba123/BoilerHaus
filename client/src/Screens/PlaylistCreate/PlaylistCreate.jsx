@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import './PlaylistCreate.css'
-import Layout from '../../Layout/Layout'
 import { Redirect } from 'react-router-dom'
 import { createPlaylist } from '../../Services/playlists'
 
@@ -35,7 +34,7 @@ const PlaylistCreate = (props) => {
         return <Redirect to={`/playlists`} />
     }
     return (
-        <Layout currentUser={props.currentUser}>
+        <>
             <form className='create-form-playlist' onSubmit={handleSubmit}>
                 <input
                     className='input-playlist-name'
@@ -100,7 +99,7 @@ const PlaylistCreate = (props) => {
                 />
                 <button type='submit' className='submit-button-playlist-create'>Submit</button>
             </form>
-        </Layout>
+        </>
     )
 
 }

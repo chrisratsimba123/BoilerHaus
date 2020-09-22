@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-import Layout from '../../Layout/Layout'
 import Banner from '../../Components/Banner/Banner'
 import CitiesBanner from '../../Assets/Cities-Banner1.jpeg'
 import NYCSubway from '../../Assets/NYC-Subway.jpeg'
@@ -11,7 +10,7 @@ import BERSubway from '../../Assets/Berlin-Subway.jpeg'
 
 const Cities = () => {
     return (
-        <Layout>
+        <>
             <Banner className='banner-image-cities' src={CitiesBanner} alt='' />
             <div className='categories-cities-screen'>
                 <Link to='/artists'>
@@ -45,7 +44,7 @@ const Cities = () => {
                     </div>
                 </Link>
             </div>
-        </Layout>
+        </>
     )
 }
 

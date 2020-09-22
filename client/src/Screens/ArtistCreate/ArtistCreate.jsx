@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import './ArtistCreate.css'
-import Layout from '../../Layout/Layout'
 import { Redirect } from 'react-router-dom'
 import { createArtist } from '../../Services/artists'
 
@@ -34,7 +33,7 @@ const ArtistCreate = (props) => {
         return <Redirect to={`/artists`} />
     }
     return (
-        <Layout currentUser={props.currentUser}>
+        <>
             <form className='create-form-artist' onSubmit={handleSubmit}>
                 <input
                     className='input-username-artist'
@@ -88,7 +87,7 @@ const ArtistCreate = (props) => {
                 />
                 <button type='submit' className='submit-button-artist-create'>Submit</button>
             </form>
-        </Layout>
+        </>
     )
 
 }

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import { useParams, Redirect } from 'react-router-dom'
-import Layout from '../../Layout/Layout'
 import { getOneArtist, updateArtist } from '../../Services/artists'
 
 const ArtistEdit = (props) => {
@@ -44,7 +43,7 @@ const ArtistEdit = (props) => {
     }
 
     return (
-        <Layout currentUser={props.currentUser}>
+        <>
             <div className='artist-edit'>
                 <div className='artist-edit-image-container'>
                     <img className='edit-artist-image' src={artist.image} alt={artist.username}/>
@@ -105,7 +104,7 @@ const ArtistEdit = (props) => {
                 <button type='submit' className='save-button-artist'>Save</button>
             </form>
             </div>
-        </Layout>
+        </>
     )
 }
 

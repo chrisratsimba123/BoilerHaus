@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import Layout from '../../Layout/Layout'
 import { getOneArtist, destroyArtist } from '../../Services/artists'
 import { useParams, Link } from 'react-router-dom'
 
@@ -23,7 +22,7 @@ const ArtistDetail = (props) => {
     }
 
     return (
-        <Layout>
+        <>
             <div className='artist-detail-container'>
                 <img className='artist-detail-image' src={artist.image} alt={artist.username}/>
                 <div className='artist-detail-div'>
@@ -36,7 +35,7 @@ const ArtistDetail = (props) => {
                     <button className='artist-delete-button' onClick={() => destroyArtist(artist.id)}>Delete</button>
                 </div>
             </div>
-        </Layout>
+        </>
     )
 }
 

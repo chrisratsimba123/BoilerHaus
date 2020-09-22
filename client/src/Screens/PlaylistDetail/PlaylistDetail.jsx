@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import './PlaylistDetail.css'
-import Layout from '../../Layout/Layout'
 import { getOnePlaylist, destroyPlaylist } from '../../Services/playlists'
 import { useParams, Link } from 'react-router-dom'
 
@@ -24,7 +23,7 @@ const PlaylistDetail = (props) => {
     }
 
     return (
-        <Layout>
+        <>
             <div className='playlist-detail-container'>
                 <img className='playlist-detail-image' src={playlist.image} alt={playlist.name}/>
                 <div className='playlist-detail-div'>
@@ -37,7 +36,7 @@ const PlaylistDetail = (props) => {
                     <button className='playlist-delete-button' onClick={() => destroyPlaylist(playlist.id)}>Delete</button>
                 </div>
             </div>
-        </Layout>
+        </>
     )
 }
 

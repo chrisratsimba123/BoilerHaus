@@ -20,11 +20,11 @@ const Playlists = (props) => {
     )
 
     return (
-        <Layout>
+        <>
             <div className="playlists">
                 {playlistsJSX}
             </div>
-        </Layout>
+        </>
     )
 }
 

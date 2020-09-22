@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import Layout from '../../Layout/Layout'
+
 import Banner from '../../Components/Banner/Banner'
 import MusicBanner from '../../Assets/Music-Banner.jpeg'
 import Disco from '../../Assets/Disco.jpeg'
@@ -9,7 +9,7 @@ import DeepHouse from '../../Assets/DeepHouse.jpeg'
 
 const Genres = () => {
     return (
-        <Layout>
+        <>
             <Banner className='banner-image-genres' src={MusicBanner} alt='' />
             <div className='categories-genres-screen'>
                 <Link to='/playlists'>
@@ -43,7 +43,7 @@ const Genres = () => {
                     </div>
                 </Link>
             </div>
-        </Layout>
+        </>
     )
 }
 
