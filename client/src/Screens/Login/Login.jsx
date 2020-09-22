@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import './Login.css'
 
 export default function Login(props) {
     const [formData, setFormData] = useState({
@@ -17,16 +18,16 @@ export default function Login(props) {
     }
 
     return (
-        <form onSubmit={(e) => {
+        <form className='create-login-form' onSubmit={(e) => {
             e.preventDefault()
             props.loginSubmit(formData)
         }}>
-            <h3>Login</h3>
-            <label> Username:
+            <h1 className='login-screen'>Login</h1>
+            <label>
                 <input
                     className='input-login-username'
                     type='text'
-                    placeholder='Name'
+                    placeholder='Username'
                     value={username}
                     name='username'
                     required
@@ -35,7 +36,7 @@ export default function Login(props) {
                 />
             </label>
             <br />
-            <label>Password:
+            <label>
                 <input
                     className='input-login-password'
                     type='password'
@@ -48,8 +49,7 @@ export default function Login(props) {
                 />
             </label>
             <br />
-            <Link to='/register'>Register</Link>
-            <button>Submit</button>
+            <button className='submit-login-button'>Submit</button>
         </form>
     )
 }

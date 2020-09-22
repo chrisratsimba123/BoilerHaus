@@ -1,0 +1,37 @@
+.create-register-form {
+    margin-left: 350px;
+    text-align: left;
+}
+
+.register-screen {
+    font-size: 48px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.input-register-username {
+    font-size: 32px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.input-register-password {
+    font-size: 18px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.input-register-email {
+    font-size: 18px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.submit-register-button {
+    font-size: 18px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    height: 40px;
+    margin-top: 40px;
+    width: 80px;
+    background-color: black;
+    color: white;
+    border: none;
+    box-shadow: 2px 2px 10px 2px #CECECE;
+    cursor: pointer;
+}

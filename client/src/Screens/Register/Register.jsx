@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import './Register.css'
 
 export default function Register(props) {
     const [formData, setFormData] = useState({
@@ -17,39 +18,51 @@ export default function Register(props) {
     }
 
     return (
-        <form onSubmit={(e) => {
+        <form className='create-register-form' onSubmit={(e) => {
             e.preventDefault()
             props.registerSubmit(formData)
         }}>
-            <h3>Register</h3>
-            <label>Username:
+            <h1 className='login-screen'>Register</h1>
+            <label>
                 <input 
+                    className='input-register-username'
                     type='text'
-                    name='username'
+                    placeholder='Username'
                     value={username}
+                    name='username'
+                    required
+                    autoFocus                 
                     onChange={handleChange}
                 />
             </label>
             <br />
-            <label>Password:
+            <label>
                 <input 
+                    className='input-register-password'
                     type='password'
-                    name='password'
+                    placeholder='Password'
                     value={password}
+                    name='password'
+                    required
+                    autoFocus
                     onChange={handleChange}
                 />
             </label>
             <br />
-            <label>Email:
+            <label>
                 <input 
+                    className='input-register-email'
                     type='text'
-                    name='email'
+                    placeholder='Email'
                     value={email}
+                    name='email'
+                    required
+                    autoFocus
                     onChange={handleChange}
                 />
             </label>
             <br />
-            <button>Submit</button>
+            <button className='submit-register-button'>Submit</button>
         </form>
     )
 }
