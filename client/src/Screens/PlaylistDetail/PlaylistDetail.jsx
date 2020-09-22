@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import './PlaylistDetail.css'
 import Layout from '../../Layout/Layout'
 import { getOnePlaylist, destroyPlaylist } from '../../Services/playlists'
 import { useParams, Link } from 'react-router-dom'

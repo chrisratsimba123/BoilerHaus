@@ -1,0 +1,99 @@
+.playlist-detail-container {
+    display: flex;
+    padding: 100px;
+    padding-top: 80px;
+}
+
+.playlist-detail-div {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.6;
+}
+
+.playlist-detail-name {
+    font-size: 64px;
+    letter-spacing: 1px;
+    padding: 5px;
+}
+
+.playlist-detail-genre {
+    font-size: 28px; 
+    letter-spacing: 1px;
+    padding: 5px;
+}
+
+.playlist-detail-city {
+    font-size: 28px; 
+    letter-spacing: 1px;
+    padding: 5px;
+}
+
+.playlist-detail-image {
+    width: 500px;
+    padding: 0 40px;
+}
+
+.button-container-playlist {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.playlist-edit-button, .playlist-delete-button {
+    font-size: 18px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    height: 40px;
+    width: 20%;
+    align-self: center;
+    margin-top: 40px;
+    background-color: black;
+    color: white;
+    border: none;
+    box-shadow: 2px 2px 10px 2px #CECECE;
+    cursor: pointer
+}
+
+.playlist-edit-link {
+    color: white;
+}
+
+@media (max-width: 1024px) {
+    .playlist-detail-name {
+        font-size: 32px;
+    }
+
+    .playlist-detail-image {
+        width: 500px; 
+        margin-top: -100px;
+        padding: 10px;
+    }
+
+    .playlist-detail-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 800px) {
+    .playlist-detail-image {
+        width: 300px;
+        margin: 15px;
+        padding: 10px;
+    }
+
+    .playlist-detail-container {
+        padding: 0px;
+        padding-top: 120px;
+    }
+
+    .button-container-playlist {
+        padding: 20px;
+        padding-bottom: 80px;
+    }
+
+    .playlist-edit-button, .playlist-delete-button {
+        width: 40%;
+    }
+}
