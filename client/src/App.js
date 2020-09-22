@@ -10,6 +10,13 @@ import Register from './Screens/Register/Register'
 import Cities from './Screens/Cities/Cities'
 import Genres from './Screens/Genres/Genres'
 import Artists from './Screens/Artists/Artists'
+import ArtistCreate from './Screens/ArtistCreate/ArtistCreate'
+import ArtistDetail from './Screens/ArtistDetail/ArtistDetail'
+import ArtistEdit from './Screens/ArtistEdit/ArtistEdit'
+import Playlists from './Screens/Playlists/Playlists'
+import PlaylistCreate from './Screens/PlaylistCreate/PlaylistCreate'
+import PlaylistDetail from './Screens/PlaylistDetail/PlaylistDetail'
+import PlaylistEdit from './Screens/PlaylistEdit/PlaylistEdit'
 
 import { loginUser, registerUser, verifyUser, removeToken } from './Services/auth'
 import ArtistsContainer from './Containers/ArtistsContainer'
@@ -74,6 +81,27 @@ function App() {
         </Route>
         <Route path='/artists'>
           <Artists />
+        </Route>
+        <Route path='/create-artist'>
+          <ArtistCreate />
+        </Route>
+        <Route exact path='/artists/:id'>
+          <ArtistDetail />
+        </Route>
+        <Route exact path='/artists/:id/edit'>
+          <ArtistEdit />
+        </Route>
+        <Route path='/playlists'>
+          <Playlists />
+        </Route>
+        <Route path='/create-playlist'>
+          <PlaylistCreate />
+        </Route>
+        <Route exact path='/playlists/:id'>
+          <PlaylistDetail />
+        </Route>
+        <Route exact path='/playlists/:id/edit'>
+          <PlaylistEdit />
         </Route>
         <Route path='/'>
           <ArtistsContainer 

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import './ArtistCreate.css'
 import Layout from '../../Layout/Layout'
 import { Redirect } from 'react-router-dom'
 import { createArtist } from '../../Services/artists'
@@ -85,7 +86,7 @@ const ArtistCreate = (props) => {
                     autoFocus
                     onChange={handleChange}
                 />
-                <button type='submit' className='submit-button'>Submit</button>
+                <button type='submit' className='submit-button-artist-create'>Submit</button>
             </form>
         </Layout>
     )
