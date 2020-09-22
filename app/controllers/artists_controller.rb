@@ -1,5 +1,5 @@
 class ArtistsController < ApplicationController
-  before_action :authorize_request, except: [:create, :index]
+  before_action :authorize_request, except: [:create, :index, :show]
   before_action :set_artist, only: [:show, :update, :destroy]
 
   # GET /artists
