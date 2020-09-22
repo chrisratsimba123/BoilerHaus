@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import './Home.css'
 import Layout from '../../Layout/Layout'
 import Banner from '../../Components/Banner/Banner'
 import Turntable from '../../Assets/Turntable2.jpeg'
@@ -10,7 +11,7 @@ import ArtistsImage from '../../Assets/Artist-Banner.jpeg'
 const Home = () => {
     return (
         <Layout>
-            <Banner className='banner-image-home' src={Turntable} alt='Turntable Banner Image' />
+            <Banner className='banner-image' src={Turntable} alt='Turntable Banner Image' />
             <div className='categories-home-screen'>
                 <Link to='/cities'>
                     <div className='category'>

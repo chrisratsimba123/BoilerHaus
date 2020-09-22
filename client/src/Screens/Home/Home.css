@@ -16,7 +16,7 @@
 
 .category-image-home {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-evenly;
 }
 
