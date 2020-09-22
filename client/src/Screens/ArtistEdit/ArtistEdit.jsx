@@ -63,7 +63,7 @@ const ArtistEdit = (props) => {
                 </div>
                 <form className='edit-artist-form' onSubmit={handleSubmit}>
                 <input
-                    className='input-username'
+                    className='input-username-artist-edit'
                     type='text'
                     placeholder='Name'
                     value={artist.username}

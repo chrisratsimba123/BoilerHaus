@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useParams, Redirect } from 'react-router-dom'
+import './PlaylistEdit.css'
 import Layout from '../../Layout/Layout'
 import { getOnePlaylist, updatePlaylist } from '../../Services/playlists'
 
