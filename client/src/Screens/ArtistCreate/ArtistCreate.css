@@ -31,7 +31,7 @@ textarea {
 }
 
 .input-password {
-    font-size: 10px;
+    font-size: 18px;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
@@ -41,20 +41,21 @@ textarea {
 }
 
 .input-artist-genre {
-    font-size: 10px;
+    font-size: 18px;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .input-artist-city {
-    font-size: 10px;
+    font-size: 18px;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .submit-button-artist-create {
-    font-size: 22px;
+    font-size: 18px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     height: 40px;
     margin-top: 40px;
+    width: 80px;
     background-color: black;
     color: white;
     border: none;
