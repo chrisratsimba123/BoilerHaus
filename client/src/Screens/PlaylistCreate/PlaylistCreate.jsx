@@ -18,11 +18,13 @@ const PlaylistCreate = (props) => {
 
     const handleChange = (e) => {
         const { name, value } = e.target
-        setPlaylist({
-            // ...prevState,
+        // console.log(name, value)
+        setPlaylist((prevState) => ({
+            ...prevState,
             [name]: value
         })
-    }
+    )
+}
 
     const handleSubmit = async (e) => {
         e.preventDefault()
@@ -40,7 +42,7 @@ const PlaylistCreate = (props) => {
                     className='input-playlist-name'
                     type='text'
                     placeholder='Name'
-                    value={playlist.name}
+                    // value={playlist.name}
                     name='name'
                     required
                     autoFocus
@@ -50,10 +52,9 @@ const PlaylistCreate = (props) => {
                     className='input-playlist-image'
                     type='url'
                     placeholder='Image Link'
-                    value={playlist.image}
+                    // value={playlist.image}
                     name='image'
                     required
-                    autoFocus
                     onChange={handleChange}
                 />
                 <input
@@ -61,40 +62,36 @@ const PlaylistCreate = (props) => {
                     rows={10}
                     type='text'
                     placeholder='Playlist Descripton'
-                    value={playlist.playlist_description}
+                    // value={playlist.playlist_description}
                     name='description'
                     required
-                    autoFocus
                     onChange={handleChange}
                 />
                 <input
                     className='input-song-name'
                     type='text'
                     placeholder='Song 1'
-                    value={playlist.song1}
+                    // value={playlist.song1}
                     name='name'
                     required
-                    autoFocus
                     onChange={handleChange}
                 />
                 <input
                     className='input-song-name'
                     type='text'
                     placeholder='Song 2'
-                    value={playlist.song2}
+                    // value={playlist.song2}
                     name='name'
                     required
-                    autoFocus
                     onChange={handleChange}
                 />
                 <input
                     className='input-song-name'
                     type='text'
                     placeholder='Song 3'
-                    value={playlist.song3}
+                    // value={playlist.song3}
                     name='name'
                     required
-                    autoFocus
                     onChange={handleChange}
                 />
                 <button type='submit' className='submit-button-playlist-create'>Submit</button>

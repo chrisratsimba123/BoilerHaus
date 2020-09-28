@@ -7,7 +7,7 @@ const ArtistCreate = (props) => {
 
     const [artist, setArtist] = useState({
         username: '',
-        password_digest: '',
+        password: '',
         image: '',
         genre: '',
         city: ''
@@ -17,11 +17,13 @@ const ArtistCreate = (props) => {
 
     const handleChange = (e) => {
         const { name, value } = e.target
-        setArtist({
-            // ...prevState,
+        // console.log(name, value)
+        setArtist((prevState) => ({
+            ...prevState,
             [name]: value
         })
-    }
+    )
+}
 
     const handleSubmit = async (e) => {
         e.preventDefault()
@@ -38,9 +40,9 @@ const ArtistCreate = (props) => {
                 <input
                     className='input-username-artist'
                     type='text'
-                    placeholder='Name'
-                    value={artist.username}
-                    name='name'
+                    placeholder='Username'
+                    // value={artist.username}
+                    name='username'
                     required
                     autoFocus
                     onChange={handleChange}
@@ -49,40 +51,45 @@ const ArtistCreate = (props) => {
                     className='input-password'
                     type='password'
                     placeholder='Password'
-                    value={artist.password_digest}
+                    // value={artist.password_digest}
                     name='password'
                     required
-                    autoFocus
                     onChange={handleChange}
                 />
                 <input
                     className='input-artist-image'
                     type='url'
                     placeholder='Image Link'
-                    value={artist.image}
+                    // value={artist.image}
                     name='image'
                     required
-                    autoFocus
                     onChange={handleChange}
                 />
                 <input
                     className='input-artist-genre'
                     type='text'
                     placeholder='Primary Genre'
-                    value={artist.genre}
+                    // value={artist.genre}
                     name='genre'
                     required
-                    autoFocus
                     onChange={handleChange}
                 />
                 <input
                     className='input-artist-city'
                     type='text'
                     placeholder='City'
-                    value={artist.city}
+                    // value={artist.city}
                     name='city'
                     required
-                    autoFocus
+                    onChange={handleChange}
+                />
+                <input
+                    className='input-artist-email'
+                    type='text'
+                    placeholder='Email'
+                    // value={artist.email}
+                    name='email'
+                    required
                     onChange={handleChange}
                 />
                 <button type='submit' className='submit-button-artist-create'>Submit</button>

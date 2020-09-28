@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useParams, Redirect } from 'react-router-dom'
+import './ArtistEdit.css'
 import { getOneArtist, updateArtist } from '../../Services/artists'
 
 const ArtistEdit = (props) => {
@@ -25,21 +26,21 @@ const ArtistEdit = (props) => {
 
     const handleChange = (e) => {
         const { name, value } = e.target
-        setArtist({
-            // ...prevState,
+        setArtist((prevState) => ({
+            ...prevState,
             [name]: value
         })
-    }
+    )
+}
 
     const handleSubmit = async (e) => {
         e.preventDefault()
-        let { id } = props.match.params
         const updated = await updateArtist(id, artist)
         setUpdated(updated)
     }
 
     if (isUpdated) {
-        return <Redirect to={`/artists/${props.match.params.id}`}/>
+        return <Redirect to={`/artists/${props.id}`}/>
     }
 
     return (
@@ -52,7 +53,7 @@ const ArtistEdit = (props) => {
                             className='edit-input-artist-image'
                             type='url'
                             placeholder='Image'
-                            value={artist.image}
+                            // value={artist.image}
                             name='image'
                             required
                             autoFocus
@@ -64,44 +65,41 @@ const ArtistEdit = (props) => {
                 <input
                     className='input-username-artist-edit'
                     type='text'
-                    placeholder='Name'
-                    value={artist.username}
-                    name='name'
+                    placeholder='Username'
+                    // value={artist.username}
+                    name='username'
                     required
                     autoFocus
                     onChange={handleChange}
                 />
                 <input
-                    className='input-password'
+                    className='input-password-edit'
                     type='password'
                     placeholder='Password'
-                    value={artist.password_digest}
+                    // value={artist.password_digest}
                     name='password'
                     required
-                    autoFocus
                     onChange={handleChange}
                 />
                 <input
-                    className='input-artist-genre'
+                    className='input-artist-genre-edit'
                     type='text'
                     placeholder='Primary Genre'
-                    value={artist.genre}
+                    // value={artist.genre}
                     name='genre'
                     required
-                    autoFocus
                     onChange={handleChange}
                 />
                 <input
-                    className='input-artist-city'
+                    className='input-artist-city-edit'
                     type='text'
                     placeholder='City'
-                    value={artist.city}
+                    // value={artist.city}
                     name='city'
                     required
-                    autoFocus
                     onChange={handleChange}
                 />
-                <button type='submit' className='save-button-artist'>Save</button>
+                <button type='submit' className='save-button-artist-edit'>Save</button>
             </form>
             </div>
         </>

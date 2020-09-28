@@ -17,12 +17,6 @@ const ArtistDetail = (props) => {
         fetchArtist()
     }, [id])
 
-    // const associatedPlaylists = artist.playlists.map((playlist) => {
-    //     <div className='associated-songs'>
-    //         song={playlist.songs}
-    //     </div>
-    // })
-
     if (!isLoaded) {
         return <h1>Loading...</h1>
     }
@@ -30,16 +24,23 @@ const ArtistDetail = (props) => {
     return (
         <>
             <div className='artist-detail-container'>
-                <img className='artist-detail-image' src={artist.image} alt={artist.username}/>
+                <img className='artist-detail-image' src={artist.image} alt={artist.username} />
                 <div className='artist-detail-div'>
                     <div className='artist-detail-name'>{artist.username}</div>
                     <div className='artist-detail-genre'>{artist.genre}</div>
                     <div className='artist-detail-city'>{artist.city}</div>
                 </div>
                 {/* List Out Playlists that the Artist has Created */}
-                {/* <div className='associated-playlists'>
-                    {associatedPlaylists}
-                </div> */}
+                <div className='associated-playlists'>
+                    {artist.playlists.map((playlist) => {
+                        return (<div className='associated-songs'>
+                            <div>
+                                {playlist.name}
+                            </div>
+                        </div>
+                        )
+                    })}
+                </div>
                 <div className='button-container-artist'>
                     <button className='artist-edit-button'><Link className='artist-edit-link' to={`/artists/${artist.id}/edit`}>Edit</Link></button>
                     <button className='artist-delete-button' onClick={() => destroyArtist(artist.id)}>Delete</button>

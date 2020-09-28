@@ -79,7 +79,7 @@ function App() {
         <Route path='/genres'>
           <Genres />
         </Route>
-        <Route path='/artists'>
+        <Route exact path='/artists'>
           <Artists />
         </Route>
         <Route path='/create-artist'>
@@ -91,7 +91,7 @@ function App() {
         <Route exact path='/artists/:id/edit'>
           <ArtistEdit />
         </Route>
-        <Route path='/playlists'>
+        <Route exact path='/playlists'>
           <Playlists />
         </Route>
         <Route path='/create-playlist'>
