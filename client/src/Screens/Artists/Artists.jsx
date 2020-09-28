@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import './Artists.css'
 
 import Artist from '../../Components/Artist/Artist'
-import Layout from '../../Layout/Layout'
 import { getAllArtists } from '../../Services/artists'
 
 const Artists = (props) => {

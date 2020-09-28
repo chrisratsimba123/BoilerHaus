@@ -4,7 +4,7 @@ import './Header.css'
 
 const Header = (props) => {
 
-    const { currentUser } = props
+    // const { currentUser } = props
 
     return (
         <>
